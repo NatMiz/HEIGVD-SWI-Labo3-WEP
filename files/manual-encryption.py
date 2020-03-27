@@ -28,7 +28,7 @@ icv = struct.pack('<l', binascii.crc32(text))
 # Concatenation text + ICV
 plaintext = text + icv
 
-# Encryption RC4•
+# Encryption RC4
 seed = arp.iv+key
 cipher = RC4(seed, streaming=False)
 ciphertext=cipher.crypt(plaintext)
@@ -38,6 +38,6 @@ arp.wepdata = ciphertext
 arp.icv = struct.unpack('!L', ciphertext[-4:])[0]
 
 # Create the new cap file
-wrpcap("test.cap", arp)
+wrpcap("test-encryption.cap", arp)
 
 

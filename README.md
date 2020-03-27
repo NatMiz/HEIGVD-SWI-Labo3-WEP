@@ -98,6 +98,10 @@ Vous devrez donc créer votre message, calculer le contrôle d’intégrité (IC
 - Vous pouvez vous guider à partir du script fourni pour les différentes conversions de formats qui pourraient être nécessaires.
 - Vous pouvez exporter votre nouvelle trame en format pcap utilisant Scapy et ensuite, l’importer dans Wireshark. Si Wireshark est capable de déchiffrer votre trame forgée, elle est correcte !
 
+**Capture d'écran:** Dans cette capture, on peut voir effectivement qu'on a reussi à chiffrer un message en WEP et que Wireshark a reussi à le déchiffrer. 
+
+![](img/Step2.png)
+
 
 ### 3. Fragmentation
 
@@ -112,6 +116,10 @@ Dans cette partie, vous allez enrichir votre script développé dans la partie p
 - Pour vérifier que cette partie fonctionne, vous pouvez importer vos fragments dans Wireshark, qui doit être capable de les recomposer
 - Pour un test encore plus intéressant (optionnel), vous pouvez utiliser un AP (disponible sur demande) et envoyer vos fragments. Pour que l’AP accepte vous données injectées, il faudra faire une « fake authentication » que vous pouvez faire avec `aireplay-ng`
 - Si l’AP accepte vos fragments, il les recomposera et les retransmettra en une seule trame non-fragmentée !
+
+**Capture d'écran:** Dans cette capture, on peut voir que Wireshark a bien réussi à déchiffrer et à recomposer les fragments du message.
+
+![](img/Step3.png)
 
 ## Livrables
 
