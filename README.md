@@ -98,7 +98,7 @@ Vous devrez donc créer votre message, calculer le contrôle d’intégrité (IC
 - Vous pouvez vous guider à partir du script fourni pour les différentes conversions de formats qui pourraient être nécessaires.
 - Vous pouvez exporter votre nouvelle trame en format pcap utilisant Scapy et ensuite, l’importer dans Wireshark. Si Wireshark est capable de déchiffrer votre trame forgée, elle est correcte !
 
-**Capture d'écran:** Dans cette capture, on peut voir effectivement qu'on a reussi à chiffrer un message en WEP et que Wireshark a reussi à le déchiffrer. 
+**Capture d'écran:** Dans cette capture, on peut voir que nous avons a réussi à chiffrer un message en WEP et que celui-ci a pu être déchiffré par Wireshark.
 
 ![](img/Step2.png)
 
