@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# source: https://stackoverflow.com/questions/30092226/how-to-calculate-crc32-with-python-to-match-online-results
+# Source: https://stackoverflow.com/questions/30092226/how-to-calculate-crc32-with-python-to-match-online-results
 
 
 """ Encryption WEB"""

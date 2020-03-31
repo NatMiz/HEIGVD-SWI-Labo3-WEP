@@ -54,7 +54,7 @@ for x in range(0,len(texts)):
     fragment.wepdata = ciphertext
     fragment.SC += x
     
-    # Check if it's the last fragment
+    # Check if it is the last fragment
     if x != len(texts) -1:
         fragment.FCfield = 0x845
     else:
